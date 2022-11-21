@@ -1,0 +1,10 @@
+! B97-3c
+
+! Opt
+
+%pal
+Nprocs 16
+End
+
+
+*xyz 0 1

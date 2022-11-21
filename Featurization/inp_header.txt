@@ -1,0 +1,11 @@
+! Wb97x-d3 
+! def2-tzvp
+
+! nmr hirshfeld
+
+%pal
+Nprocs 16
+End
+
+
+*xyz 0 1

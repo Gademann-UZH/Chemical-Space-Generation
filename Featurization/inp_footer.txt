@@ -1,0 +1,6 @@
+*
+
+%eprnmr
+Nuclei = All C {shift}
+Nuclei = All B {shift}
+End

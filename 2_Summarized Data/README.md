@@ -50,9 +50,9 @@ To adjust the parser you need to add an additional entry to the "params_of_inter
 
 The keyword has to be a unique string with the ORCA output file and is used to locate the block of results within this file. In our case the parser will open an ORCA output file and search it for "CHEMICAL SHIELDING SUMMARY", which it finds in the following block:
 
->–-------------------------------
->**CHEMICAL SHIELDING SUMMARY** (ppm)
->–-------------------------------
+>–-------------------------------\n
+>**CHEMICAL SHIELDING SUMMARY** (ppm)\n
+>–-------------------------------\n
 >
 >
 >  Nucleus  Element    Isotropic     Anisotropy

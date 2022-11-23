@@ -8,7 +8,7 @@ Featurize.py reads in molecular structures in SMILES format from a dataset.txt f
 
 ### 1) Install OpenBabel, ORCA, XTB, CREST, and Multiwfn
 
-For the installation of these programs there are various options and possibilities, which all depend on the OS you use and personal preferences. In our case, the featurization was performed on the UZH science cloud and hence installed from pre-compiled binaries on Linux. Additionally, the installation can be performed with Conda.
+For the installation of these programs there are various options and possibilities, which all depend on the OS you use and personal preferences. In our case, the featurization was performed on the UZH science cloud and hence installed from pre-compiled binaries on Linux. Additionally, the installation of [OpenBabel](https://anaconda.org/conda-forge/openbabel), [XTB](https://anaconda.org/conda-forge/xtb), and [CREST](https://anaconda.org/conda-forge/crest) can be performed with Conda. Installing Multiwfn on Mac systems is fairly tedious. Hence, the use of Windows or Linux is advised.
 
 ### 2) Adjust the header & footer files
 

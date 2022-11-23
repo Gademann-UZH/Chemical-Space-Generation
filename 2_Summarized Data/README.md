@@ -52,4 +52,6 @@ The keyword has to be a unique string with the ORCA output file and is used to l
 
 ![alt text](./_pics/Pic_1.png)
 
- The "y_offset" key then tells the parser how many line below the one with the "keyword" the data of interest starts. In the example case this is 
+ The "y_offset" key then tells the parser how many lines below the one with the "keyword" the data of interest starts. In the example case this is 6 lines below.
+
+ ![alt text](./_pics/Pic_2.png)

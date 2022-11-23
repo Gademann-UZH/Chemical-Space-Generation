@@ -8,6 +8,10 @@ Portions of the code found in this repository and the general workflow used for 
 
 The repository holds an implementation of a workflow reported by [Doyle and co-workers](https://doi.org/10.1021/jacs.1c12203) for the featurization and dimensionality reduction (UMAP) to generate data-science based chemical spaces. Based on this workflow, our group has generated a boronic acid chemical space, which has been used in works related to the cross-coupling of [bromotetrazines](https://doi.org/10.1021/acscatal.2c01813) and [bromotriazines](https://doi.org/10.1021/acs.joc.2c02082).
 
+The computed parameters for each substrate are:
+
+(Add a list of parameters)
+
 ## Contents
 
 This repository holds various folder, their contents are quickly described.

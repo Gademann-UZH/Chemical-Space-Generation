@@ -184,7 +184,7 @@ def calc_charges(basename, commands=pa_commands):
     '''Set up PA calculations with ORCA and Multiwfn'''
     # all electron orbitals calculation
     with open(f'{basename}_all_e.txt', 'w') as input:
-        input.write(f'! wB97X old-TZVP\n! Pal16\n\n%maxcore 3700\n\n%scf\nMaxIter 500\nend\n\n* xyzfile 0 1 {basename}.xyz\n')
+        input.write(f'! wB97X old-TZVP\n! Pal{cores}\n\n%maxcore 3700\n\n%scf\nMaxIter 500\nend\n\n* xyzfile 0 1 {basename}.xyz\n')
     os.system(f'{ORCA_PATH} {basename}_all_e.txt > {basename}_all_e.out')
     # with Multiwfn
     for pa_type in commands:
@@ -194,7 +194,7 @@ def calc_charges(basename, commands=pa_commands):
         os.system(f'rm {basename}_{pa_type}.inp')
     # with ORCA (IBO)
     with open(f'{basename}_IBO.txt', 'w') as input:
-        input.write(f'! wB97X old-TZVP\n! Pal16\n\n%maxcore 3700\n\n%scf\nMaxIter 500\nend\n\n%loc\nlocmet IAOIBO\nvirt false\nocc true\nt_core -100000.0\nend\n\n* xyzfile 0 1 {basename}.xyz\n')
+        input.write(f'! wB97X old-TZVP\n! Pal{cores}\n\n%maxcore 3700\n\n%scf\nMaxIter 500\nend\n\n%loc\nlocmet IAOIBO\nvirt false\nocc true\nt_core -100000.0\nend\n\n* xyzfile 0 1 {basename}.xyz\n')
     os.system(f'{ORCA_PATH} {basename}_IBO.txt > {basename}_IBO.out')
     return None
 
@@ -291,14 +291,14 @@ for smile in smiles_list:
       print("featurization part I finished.\n")
 
       # load the structure
-      molecule = get_molecule("_" + folder_name)
+      molecule = get_molecule(file_prefix + "_" + folder_name)
       # determine index of C bonded to B
       atom_index = get_atom_indeces(molecule, X)[0]
       C_index = closest_n_atoms_indeces(molecule, atom_index, num_atoms=1)[0]   
       # calculate charges
-      calc_charges("_" + folder_name)
+      calc_charges(file_prefix + "_" + folder_name)
       # extracht charges for C_index
-      results = extract_charges("_" + folder_name, C_index)
+      results = extract_charges(file_prefix + "_" + folder_name, C_index)
       # calculate Vbur
       Vbur = Vbur_calc(Vbur_prepare(molecule, metal_to_ligand=2.05), grid=0.05, remove_H=False)
       # save results

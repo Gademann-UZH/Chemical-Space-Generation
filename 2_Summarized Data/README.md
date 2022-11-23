@@ -48,19 +48,21 @@ To adjust the parser you need to add an additional entry to the "params_of_inter
     "keep_index": [0, 1, 2]
 }
 
-The keyword has to be a unique string with the ORCA output file and is used to locate the block of results within this file. In our case the parser will open an ORCA output file and search it for "CHEMICAL SHIELDING SUMMARY", which it finds in the following block:
+The keyword has to be a unique string with the ORCA output file and is used to locate the block of results within this file. The "abbr" key is used for the population of the "collected_data" dictionary and can be freely chosen. In our case the parser will open an ORCA output file and search it for "CHEMICAL SHIELDING SUMMARY", which it finds in the following block:
 
 >–-------------------------------      
 >**CHEMICAL SHIELDING SUMMARY** (ppm)      
->–-------------------------------     
->
->
->  Nucleus  Element    Isotropic     Anisotropy
->  -------  -------  ------------   ------------
->      3       C           54.135        213.866 
+>–-------------------------------                     +1 line     
+>                                                     +2 lines     
+>                                                     +3 lines    
+>  Nucleus  Element    Isotropic     Anisotropy       +4 lines    
+>  -------  -------  ------------   ------------      +5 lines     
+>      3       C           54.135        213.866      +6 lines     
 >      4       C           46.479        205.318 
 >      5       C           55.608        189.640 
 >      6       C           51.978        195.684 
 >      7       C           57.026        187.257 
 >      8       C           51.793        191.717 
 >      1       B           78.357         21.464
+
+ The "y_offset" key then tells the parser how many line below the one with the "keyword" the data of interest starts. In the example case this is 

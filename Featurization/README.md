@@ -37,9 +37,9 @@ The Featurize.py script is now ready-to-use.
 
 ### 5) Run the script
 
-To run the script, navigate via the command line to the directory with the Featurize.py script. 
+To run the script, navigate via the command line to the directory with the Featurize.py script., e.g.:
 
--> /Users/user/Desktop/MyFeaturization
+-> cd /Users/user/Desktop/MyFeaturization
 
 Then start the program, but make sure to run it in the background and to redirect any output to a log file.
 

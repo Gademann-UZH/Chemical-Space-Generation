@@ -5,6 +5,7 @@ import copy, os
 # CONSTANTS (Defined by the user as needed) ---------------------------------------------
 
 ORCA_PATH = '/home/ubuntu/soft/orca/orca'   # <------- has to point to the orca software. Will be used to run orca via the command line (os)
+cores = 16
 X = "Br"   # <------- Define the atom of interest. This is needed to calculate VBur and find the relevant carbon atoms for UMAP.
 file_prefix = ""
 
@@ -218,7 +219,6 @@ def data_to_csv(lst, filename='results'):
 # MAIN -------------------------------------------------------------------------------
 
 index = 0
-cores = 16
 
 assigned_list = open("assigned_list.txt", "w")
 assigned_list.close()

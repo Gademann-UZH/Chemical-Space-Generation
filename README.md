@@ -16,7 +16,7 @@ This repository holds various folder, their contents are quickly described.
 
 **Featurize.py:**
 
-The code folder contains the Featurize.py script, which can be run on a science cloud or any machine to generate the raw featurization data used for the generation of chemical spaces. It is written in python and uses only standard modules (os and copy). However, it requires ORCA, [XTB](https://xtb-docs.readthedocs.io/en/latest/setup.html), and [CREST](https://xtb-docs.readthedocs.io/en/latest/crest.html) to be installed. To download ORCA, you need to register on the [ORCA Forum](https://orcaforum.kofo.mpg.de/app.php/portal). An explanation of how ORCA works is beyond the scope of this summary. Still additional and useful information can be found in the [ORCA input library](https://sites.google.com/site/orcainputlibrary/home?pli=1). The output of the script is a folder structure that holds all the computed XTB, CREST, and ORCA files.
+The code folder contains the Featurize.py script, which can be run on a science cloud or any machine to generate the raw featurization data used for the generation of chemical spaces. It is written in python and uses only standard modules (os and copy). However, it requires [OpenBabel](http://openbabel.org/wiki/Main_Page), ORCA, [XTB](https://xtb-docs.readthedocs.io/en/latest/setup.html), [CREST](https://xtb-docs.readthedocs.io/en/latest/crest.html), and [Multiwfn](http://sobereva.com/multiwfn/) to be installed. To download ORCA, you need to register on the [ORCA Forum](https://orcaforum.kofo.mpg.de/app.php/portal). An explanation of how ORCA works is beyond the scope of this summary. Still additional and useful information can be found in the [ORCA input library](https://sites.google.com/site/orcainputlibrary/home?pli=1). The output of the script is a folder structure that holds all the computed XTB, CREST, and ORCA files.
 
 **Summarize_Featurization_Data.ipynb:**
 
@@ -44,4 +44,4 @@ The ready-to-use .csv files are stored in this folder.
 
 ## Usage
 
-Describe usage
+For instructions on how you run the individual steps of this workflow refer to the README.md files in the individual folders.

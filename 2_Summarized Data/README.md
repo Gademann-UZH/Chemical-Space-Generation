@@ -39,6 +39,17 @@ To summarize the featurization data:
 
 ### (Optional) Adjust the parser
 
+#### TLDR
+
+To include data in being extracted by the parser we add a new entry to the "params_of_interest" array:
+
+- Open an ORCA output file, find the title of the block of data we are interested in and use it as "keyword".
+- Give it an abbreviation to be used for saving.
+- Count the lines to the first row of data of interest and use this number as "y_offset"
+- Look at the "words" in this line and add the indeces of the ones of interest to the "keep_index" array. Here, we pay attention to keep indeces of Atom Nr, Atom Type, and Value for lists of data (e.g. charges, chemical shielding, etc.) and only the Value index for single values (dipole).
+
+#### Detailed explanation
+
 To adjust the parser you need to add an additional entry to the "params_of_interest" array. The structure of such an entry is as follows:
 
 {
@@ -52,6 +63,24 @@ The keyword has to be a unique string with the ORCA output file and is used to l
 
 ![alt text](./_pics/Pic_1.png)
 
- The "y_offset" key then tells the parser how many lines below the one with the "keyword" the data of interest starts. In the example case this is 6 lines below.
+The "y_offset" key then tells the parser how many lines below the one with the "keyword" the data of interest starts. In the example case this is 6 lines below.
 
- ![alt text](./_pics/Pic_2.png)
+![alt text](./_pics/Pic_2.png)
+
+The final key "keep_index" is a bit more complicated and does multiple things. In a first step it checks how many indexes the "keep_index" array has. Based on this it collects and treats data slightly different. In the example case the "keep_index" array has a length of 3 (holds 3 elements). Now that we have found the first line with data we want to extract, the parser splits the line into words whenever it finds empty space between letters and writes them into a new array.
+
+For the line "3       C           54.135        213.866" this results in the follwing 0-based (first index is 0) array: ["3", "C", "54.135", "213.866"]. First, the "keep_ideces" are 0, 1, 2. This tells the parser to keep the values of array[0], array[1], and array[2] which are "3", "C", and "54.135". These values are then stored in the "collected_data" dictionary. 
+
+Now that the first line has been extracted and saved there are a few options for the parser to continue, which depend on the length of the "keep_index" array. If its length is
+
+- 1: It saves the desired value and continues with the collection of the next parameter. An example of this type is the dipole.
+- 2: Is a special case and exclusively used to extract HOMO/LUMO energies.
+- 3: It collects the data for all atoms in a molecule.
+
+In the example case (3 keep_indeces) the parser knows how many atoms are present in the current molecule and hence does not stop after the first line but continues until it collected the data of all atoms. This generally works because this type of data is always reported by ORCA in a similar way as shown in the images above: Atom Nr, Atom Type, Value, (Value), ...
+
+Thus if we want to add a new entry to the "params_of_interest" array we:
+
+- Open an ORCA output file, find the title of the block of data we are interested in and use it as "keyword".
+- Count the lines to the first row of data of interest and use this number as "y_offset"
+- Look at the "words" in this line and add the indeces of the ones of interest to the "keep_index" array. Here, we pay attention to keep indeces of Atom Nr, Atom Type, and Value for lists of data (e.g. charges, chemical shielding, etc.) and only the Value index for single values (dipole).

@@ -6,7 +6,7 @@ The **Dim_Reduction_and_UMAP_Plotting:** notbook, reads in pre-compiled featuriz
 
 This script is based on resources for which a detailed explanation is beyond the scope of this how-to. However, here you find additional information about:
 
-UMAP: [documentation](https://umap-learn.readthedocs.io/en/latest/), [interactive "simple" explanation](https://pair-code.github.io/understanding-umap/)
+UMAP: [documentation](https://umap-learn.readthedocs.io/en/latest/), [interactive "simple" explanation](https://pair-code.github.io/understanding-umap/)        
 Silhouette scores: [publication](https://doi.org/10.1016/0377-0427(87)90125-7), [implementation in python](https://towardsdatascience.com/silhouette-coefficient-validating-clustering-techniques-e976bb81d10c)
 
 ## Step-by-step
@@ -41,25 +41,21 @@ During this rating process, it keeps track of all scores and the respective valu
 
 5) The few lines of code in the next block plot the clustered chemical space based on the highest scoring embedding. By default, each cluster is shown in a different color (palette = "rainbow"). However, the color scheme can be eaasily adjusted by changing the "palette" argument value in the sns.scatterplot() function. Here is an extensive overview of available [seaborn colorschemes](https://medium.com/@morganjonesartist/color-guide-to-seaborn-palettes-da849406d44f).
 
-**Optional**
+5.5) **IMPORTANT TO NOTE**: The code keeping track of the "best" Silhouette score is extremely simple and only checks for which combination of arguments the highest value is achieved. It has no idea of trends or outliers, which may cause a bad embedding to be picked for plotting. Hence, iterating over steps 3) to 5) is advised. 
 
-6)
+**OPTIONAL**
 
+6) The next block of code can be used to read in multiple sets of substrates to then plot them on top of the chemical space. The lists provided for this should be in .txt format and contain all substrates as inchis. In code, adjust the name of the files you want to read in and comment out or remove the segments of "with open" commands you do not need. Then run the block of code. It will check whether the provided inchis are present within the chemical space dataset and will let you know how many and which were found by means of their index in the dataset.txt file. The found compound indeces are stored in the "index_groups" dictionary and are used to identify substrates within the "plot_data" dictionary.
 
+7) Run the next block to retrieve the partial data from the optimal embedding. The default setup will generate groupings of the clusters specific to this project. Feel free to modify this as you need.
 
-7)
+8) Now that we have the coordinates of the substrates we want to plot on the chemical space, we can do so. As mentioned in 7) the visuals of this will greatly depend on the grouping, which can be modified as needed. The same is true for the markers (stars) and the color scheme. For more information on modifying the color scheme refer to 5).
 
+9) The next block shows how plotting with a different grouping might look like. In this case, clusters are grouped depending on reactivity and markers (stars) are colored according to the substrate set we read-in in 6). Additionally, each marker is labeled with the index of the substrate within the dataset.txt file, ich_list.txt file, or assigned_list.txt file obtained from the featurization. 
 
+10) The last cluster can be used to display n members of each cluster (or the whole cluster if n is larger than the cluster size). To do so we define the "n_per_cluster" variable to say how many examples per cluster should be displayed and run the block of code. If the specified line is uncommended all images generated this way will be saved:
 
-8)
-
-
-
-9)
-
-
-
-10)
+- pic.save(f"Cluster_{group}.png")
 
 
 

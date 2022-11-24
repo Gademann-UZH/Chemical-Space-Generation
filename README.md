@@ -30,7 +30,7 @@ The **Summarize_Featurization_Data.ipynb:** Jupyter Notebook reads in all featur
 
 The **Dim_Reduction_and_UMAP_Plotting:** notbook, reads in pre-compiled featurization data in .csv format and generates a chemical space using UMAP. Furthermore, it can be used to plot the resulting clusters in various ways.
 
-### Pick Substrates From Chemical Space
+### Pick Random Substrates From Chemical Space
 
 The **Random_BA_Picking.ipynb:** notebook reads in data from a summarized .csv file, generates a chemical space, and picks one random substrate from every cluster.
 

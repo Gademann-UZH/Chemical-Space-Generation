@@ -47,7 +47,7 @@ During this rating process, it keeps track of all scores and the respective valu
 
 6) The next block of code can be used to read in multiple sets of substrates to then plot them on top of the chemical space. The lists provided for this should be in .txt format and contain all substrates as inchis. In code, adjust the name of the files you want to read in and comment out or remove the segments of "with open" commands you do not need. Then run the block of code. It will check whether the provided inchis are present within the chemical space dataset and will let you know how many and which were found by means of their index in the dataset.txt file. The found compound indeces are stored in the "index_groups" dictionary and are used to identify substrates within the "plot_data" dictionary.
 
-7) Run the next block to retrieve the partial data from the optimal embedding. The default setup will generate groupings of the clusters specific to this project. Feel free to modify this as you need.
+7) Run the next block to retrieve the partial data from the optimal embedding. The default setup will generate groupings of the clusters specific to [this project](https://doi.org/10.1021/acscatal.2c01813). Feel free to modify this as you need.
 
 8) Now that we have the coordinates of the substrates we want to plot on the chemical space, we can do so. As mentioned in 7) the visuals of this will greatly depend on the grouping, which can be modified as needed. The same is true for the markers (stars) and the color scheme. For more information on modifying the color scheme refer to 5).
 
@@ -56,8 +56,3 @@ During this rating process, it keeps track of all scores and the respective valu
 10) The last cluster can be used to display n members of each cluster (or the whole cluster if n is larger than the cluster size). To do so we define the "n_per_cluster" variable to say how many examples per cluster should be displayed and run the block of code. If the specified line is uncommended all images generated this way will be saved:
 
 - pic.save(f"Cluster_{group}.png")
-
-
-
-
-

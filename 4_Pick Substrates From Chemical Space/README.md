@@ -37,4 +37,4 @@ Finally, the clustered chemical space based on the highest scoring embedding is 
 
 **IMPORTANT TO NOTE**: The code keeping track of the "best" Silhouette score is extremely simple and only checks for which combination of arguments the highest value is achieved. It has no idea of trends or outliers, which may cause a bad embedding to be picked for plotting. Hence, iterating over steps 3) to 5) is advised.
 
-4) If you are happy with the chemical space, you can run the last block of code. It will group the dataset according to the clustering and pick one example from each cluster. Itb will also retrieve their coordinates within the chemical space and then output the structures of all picked substrates and a chemical space map which shows the picked substrates as stars.
+4) If you are happy with the chemical space, you can run the last block of code. It will group the dataset according to the clustering and pick one example from each cluster. It will also retrieve their coordinates within the chemical space and then output the structures of all picked substrates and a chemical space map which shows the picked substrates as stars.

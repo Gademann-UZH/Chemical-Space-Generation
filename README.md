@@ -37,3 +37,23 @@ The **Random_BA_Picking.ipynb:** notebook reads in data from a summarized .csv f
 ## Usage
 
 For instructions on how you run the individual steps of this workflow refer to the README.md files in the individual folders.
+
+## References
+
+1. [Hoff, L. V.; Chesnokov, G. A.; Linden, A.; Gademann, K. Mechanistic Studies and Data Science-Guided Exploration of Bromotetrazine Cross-Coupling. ACS Catal. 2022, 12 (15), 9226− 9237.](https://doi.org/10.1021/acscatal.2c01813)
+2. [Hoff, L.; Hauser, J.; Gademann, K. Cross-Coupling Reactions of 5-Bromo-1,2,3-Triazine. J. Org. Chem. 2022, 87, 15684–15692.](https://doi.org/10.1021/acs.joc.2c02082)
+3. [Kariofillis, S. K.; Jiang, S.; Żurański, A. M.; Gandhi, S. S.; Martinez Alvarado, J. I.; Doyle, A. G. Using Data Science To Guide Aryl Bromide Substrate Scope Analysis in a Ni/Photoredox-Catalyzed Cross-Coupling with Acetals as Alcohol-Derived Radical Sources. J. Am. Chem. Soc. 2022, 144 (2), 1045–1055.](https://doi.org/10.1021/jacs.1c12203)
+4. [O’Boyle, N. M.; Banck, M.; James, C. A.; Morley, C.; Vandermeersch, T.; Hutchison, G. R. Open Babel: An Open Chemical Toolbox. J. Cheminformatics 2011, 3, 33.](https://doi.org/10.1186/1758-2946-3-33)
+5. [Open Babel. http://openbabel.org (accessed 2022-06-12).](http://openbabel.org)
+6. [Bannwarth, C.; Caldeweyher, E.; Ehlert, S.; Hansen, A.; Pracht, P.; Seibert, J.; Spicher, S.; Grimme, S. Extended Tight-Binding Quantum Chemistry Methods. WIREs Comput. Mol. Sci. 2021, 11 (2), e1493.](https://doi.org/10.1002/wcms.1493)
+7. [Grimme, S. Exploration of Chemical Compound, Conformer, and Reaction Space with Meta-Dynamics Simulations Based on Tight-Binding Quantum Chemical Calculations. J. Chem. Theory Comput. 2019, 15 (5), 2847–2862.](https://doi.org/10.1021/acs.jctc.9b00143)
+8. [Pracht, P.; Grimme, S. Calculation of Absolute Molecular Entropies and Heat Capacities Made Simple. Chem. Sci. 2021, 12 (19), 6551–6568.](https://doi.org/10.1039/D1SC00621E)
+9. [McInnes, L.; Healy, J.; Melville, J. UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction. ArXiv180203426 Cs Stat 2020.](https://doi.org/10.48550/arXiv.1802.03426)
+10. [Rousseeuw, P. J. Silhouettes: A Graphical Aid to the Interpretation and Validation of Cluster Analysis. J. Comput. Appl. Math. 1987, 20, 53–65.](https://doi.org/10.1016/0377-0427(87)90125-7)
+11. [Harris, C. R.; Millman, K. J.; van der Walt, S. J.; Gommers, R.; Virtanen, P.; Cournapeau, D.; Wieser, E.; Taylor, J.; Berg, S.; Smith, N. J.; Kern, R.; Picus, M.; Hoyer, S.; van Kerkwijk, M. H.; Brett, M.; Haldane, A.; del Río, J. F.; Wiebe, M.; Peterson, P.; Gérard-Marchant, P.; Sheppard, K.; Reddy, T.; Weckesser, W.; Abbasi, H.; Gohlke, C.; Oliphant, T. E. Array Programming with NumPy. Nature 2020, 585 (7825), 357–362.](https://doi.org/10.1038/s41586-020-2649-2)
+12. [Reback, J.; jbrockmendel; McKinney, W.; Bossche, J. V. den; Augspurger, T.; Cloud, P.; Hawkins, S.; Roeschke, M.; gfyoung; Sinhrks; Klein, A.; Hoefler, P.; Petersen, T.; Tratner, J.; She, C.; Ayd, W.; Naveh, S.; Garcia, M.; Darbyshire, J. H. M.; Schendel, J.; Hayden, A.; Shadrach, R.; Saxton, D.; Gorelli, M. E.; Li, F.; Zeitlin, M.; Jancauskas, V.; McMaster, A.; Battiston, P.; Seabold, S. Pandas-Dev/Pandas: Pandas 1.4.0rc0; Zenodo, 2022.](https://doi.org/10.5281/zenodo.5824773)
+13. [Pedregosa, F.; Varoquaux, G.; Gramfort, A.; Michel, V.; Thirion, B.; Grisel, O.; Blondel, M.; Prettenhofer, P.; Weiss, R.; Dubourg, V.; Vanderplas, J.; Passos, A.; Cournapeau, D.; Brucher, M.; Perrot, M.; Duchesnay, É. Scikit-Learn: Machine Learning in Python. J. Mach. Learn. Res. 2011, 12 (85), 2825–2830.](https://www.jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf)
+14. [Virtanen, P.; Gommers, R.; Oliphant, T. E.; Haberland, M.; Reddy, T.; Cournapeau, D.; Burovski, E.; Peterson, P.; Weckesser, W.; Bright, J.; van der Walt, S. J.; Brett, M.; Wilson, J.; Millman, K. J.; Mayorov, N.; Nelson, A. R. J.; Jones, E.; Kern, R.; Larson, E.; Carey, C. J.; Polat, İ.; Feng, Y.; Moore, E. W.; VanderPlas, J.; Laxalde, D.; Perktold, J.; Cimrman, R.; Henriksen, I.; Quintero, E. A.; Harris, C. R.; Archibald, A. M.; Ribeiro, A. H.; Pedregosa, F.; van Mulbregt, P. SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python. Nat. Methods 2020, 17 (3), 261–272.](https://doi.org/10.1038/s41592-019-0686-2)
+15. [RDKit: Open-Source Cheminformatics; RDKit, 2022.](https://www.rdkit.org/)
+16. [Waskom, M. L. Seaborn: Statistical Data Visualization. J. Open Source Softw. 2021, 6, 3021.](https://doi.org/10.21105/joss.03021)
+17. [Hunter, J. D. Matplotlib: A 2D Graphics Environment. Comput. Sci. Eng. 2007, 9, 90–95.](https://doi.org/10.1109/MCSE.2007.55)

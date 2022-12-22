@@ -6,7 +6,7 @@ Portions of the code found in this repository and the general workflow used for 
 
 ## Abstract
 
-The repository holds an implementation of a workflow reported by [Doyle and co-workers](https://doi.org/10.1021/jacs.1c12203) for the featurization and dimensionality reduction (UMAP) to generate data-science based chemical spaces. Based on this workflow, our group has generated a boronic acid chemical space, which has been used in works related to the cross-coupling of [bromotetrazines](https://doi.org/10.1021/acscatal.2c01813) and [bromotriazines](https://doi.org/10.1021/acs.joc.2c02082).
+The repository holds a modification of a workflow reported by [Doyle and co-workers](https://doi.org/10.1021/jacs.1c12203) for the featurization and dimensionality reduction (UMAP) to generate data-science based chemical space. Based on this workflow, our group has generated a boronic acid chemical space, which has been used in published studies related to the cross-coupling of [bromotetrazines](https://doi.org/10.1021/acscatal.2c01813) and [bromotriazines](https://doi.org/10.1021/acs.joc.2c02082).
 
 The computed parameters for each substrate are:
 
@@ -14,13 +14,13 @@ The computed parameters for each substrate are:
 
 ## Contents
 
-This repository holds various folder, their contents are quickly described.
+This repository holds various folders and their contents are quickly described.
 
 ### Featurization
 
-The folder also contains the Featurize.py script along with all files necessary to perform a featurization. These are a dataset and two sets of input header and footer to generate ORCA input files. BA_dataset_1.txt contains SMILES of 730 boronic acids. BA_dataset_2.txt contains SMILES of ~2800 boronic acids. Br_dataset.txt contains SMILES of ~2600 aryl bromides and is identical to the dataset used by [Doyle and co-workers](https://doi.org/10.1021/jacs.1c12203). The input headers and footers contain additional information for the generation of ORCA input files and can be modified as needed. With the current Featurize.py setup the initial geometry optimization uses the "_geo_opt" suffixed files and the featurization uses the other set of files.
+The folder also contains the Featurize.py script along with all files necessary to perform a featurization. These are a dataset and two sets of input header and footer to generate ORCA input files. BA_dataset_1.txt contains SMILES data of 730 boronic acids. BA_dataset_2.txt contains SMILES data of ~2800 boronic acids. Br_dataset.txt contains SMILES of ~2600 aryl bromides and is identical to the dataset used by [Doyle and co-workers](https://doi.org/10.1021/jacs.1c12203). The input headers and footers contain additional information for the generation of ORCA input files and can be modified as needed. With the current Featurize.py setup the initial geometry optimization uses the "_geo_opt" suffixed files and the featurization uses the other set of files.
 
-The **Featurize.py:** script, is used to generate the raw featurization data used for the generation of chemical spaces. It is written in python and uses only standard modules (os and copy). However, it requires [OpenBabel](http://openbabel.org/wiki/Main_Page), ORCA, [XTB](https://xtb-docs.readthedocs.io/en/latest/setup.html), [CREST](https://xtb-docs.readthedocs.io/en/latest/crest.html), and [Multiwfn](http://sobereva.com/multiwfn/) to be installed. To download ORCA, you need to register on the [ORCA Forum](https://orcaforum.kofo.mpg.de/app.php/portal). An explanation of how ORCA works is beyond the scope of this summary. Still additional and useful information can be found in the [ORCA input library](https://sites.google.com/site/orcainputlibrary/home?pli=1). The output of the script is a folder structure that holds all the computed XTB, CREST, and ORCA files.
+The **Featurize.py:** script is used to generate the raw featurization data used for the generation of chemical spaces. It is written in python and uses only standard modules (os and copy). However, it requires [OpenBabel](http://openbabel.org/wiki/Main_Page), ORCA, [XTB](https://xtb-docs.readthedocs.io/en/latest/setup.html), [CREST](https://xtb-docs.readthedocs.io/en/latest/crest.html), and [Multiwfn](http://sobereva.com/multiwfn/) to be installed. To download ORCA, you need to register on the [ORCA Forum](https://orcaforum.kofo.mpg.de/app.php/portal). An explanation of how ORCA works is beyond the scope of this summary. Still additional and useful information can be found in the [ORCA input library](https://sites.google.com/site/orcainputlibrary/home?pli=1). The output of the script is a folder structure that holds all the computed XTB, CREST, and ORCA files.
 
 ### Summarized Data
 
@@ -28,11 +28,11 @@ The **Summarize_Featurization_Data.ipynb:** Jupyter Notebook reads in all featur
 
 ### Dim Reduction & Plotting
 
-The **Dim_Reduction_and_UMAP_Plotting:** notbook, reads in pre-compiled featurization data in .csv format and generates a chemical space using UMAP. Furthermore, it can be used to plot the resulting clusters in various ways.
+The **Dim_Reduction_and_UMAP_Plotting.ipynb** notebook reads in pre-compiled featurization data in .csv format and generates a chemical space using UMAP. Furthermore, it can be used to plot the resulting clusters in various ways.
 
 ### Pick Random Substrates From Chemical Space
 
-The **Random_BA_Picking.ipynb:** notebook reads in data from a summarized .csv file, generates a chemical space, and picks one random substrate from every cluster.
+The **Random_BA_Picking.ipynb** notebook reads in data from a summarized .csv file, generates a chemical space, and picks one random substrate from every cluster.
 
 ## Usage
 

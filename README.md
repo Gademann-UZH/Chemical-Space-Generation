@@ -10,7 +10,24 @@ The repository holds a modification of a workflow reported by [Doyle and co-work
 
 The computed parameters for each substrate are:
 
-(Add a list of parameters)
+- Electronegativity
+- Hardness
+- Softness
+- Dipole
+- Loewdin charges
+- Mulliken charges
+- Hirshfield charges
+- HOMO energy
+- LUMO energy
+- Final single point energy
+- C–B bond distance
+- Chemical shielding
+- Buried volume
+- ADCH charges
+- MK-ESP charges
+- CM5 charges
+- QTAIM charges
+- IBO charges
 
 ## Contents
 
